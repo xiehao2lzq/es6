@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //let命令
+        //let命令和var类似，用来声明变量
+
+
+        /* 不存在变量提升 */
+        // var 的情况
+        console.log(foo); // 输出undefined
+        var foo = 2;
+
+        // let 的情况
+        var bar;
+       // console.log(bar); // 报错ReferenceError
+        //let bar = 2;
+
+
+        /* 存在暂时性死区 */
+        //ES6 明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，
+        //从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。
+        if (true) {
+            var tem;
+            tmp = 'abc'; // ReferenceError
+            //let tmp;
+        }
+
+
+        /* 块级作用域 */
+        for(let i =0 ;i<10;i++){
+            console.log(i)
+        }
+        //可以代替闭包循环绑定事件
+
+    </script>
+</body>
+
+</html>
