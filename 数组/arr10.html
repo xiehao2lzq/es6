@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       // 排序稳定性（ stable sorting） 是排序算法的重要属性， 指的是排序关键字相同的项目， 排序前后的顺序不变。
+
+        const arr = [
+            'peach',
+            'straw',
+            'apple',
+            'spork'
+        ];
+
+        const stableSorting = (s1, s2) => {
+            if (s1[0] < s2[0]) return -1;
+            return 1;
+        };
+
+        arr.sort(stableSorting)
+        // ["apple", "peach", "straw", "spork"]
+    </script>
+</body>
+
+</html>
