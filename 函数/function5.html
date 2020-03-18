@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //函数的尾调用
+        function f() {
+            let m = 1;
+            let n = 2;
+            return g(m + n);
+        }
+        f();
+
+        // 等同于
+        function f() {
+            return g(3);
+        }
+        f();
+
+        // 等同于
+        g(3);
+        /* 上面代码中， 如果函数g不是尾调用， 函数f就需要保存内部变量m和n的值、 g的调用位置等信息。 但由于调用g之后， 函数f就结束了， 所以执行到最后一步， 完全可以删除f(x) 的调用帧， 只保留g(3) 的调用帧。
+
+        这就叫做“ 尾调用优化”（ Tail call optimization）， 即只保留内层函数的调用帧。 如果所有函数都是尾调用， 那么完全可以做到每次执行时， 调用帧只有一项， 这将大大节省内存。 这就是“ 尾调用优化” 的意义。
+
+        注意， 只有不再用到外层函数的内部变量， 内层函数的调用帧才会取代外层函数的调用帧， 否则就无法进行“ 尾调用优化”。 */
+    </script>
+</body>
+
+</html>
