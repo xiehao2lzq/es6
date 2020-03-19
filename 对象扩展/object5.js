@@ -26,7 +26,7 @@ const proto = {
   const obj = {
     x: 'world',
     foo() {
-        super.foo;//?Object.getPrototypeOf(this).foo.call(this)
+        super.foo();//?Object.getPrototypeOf(this).foo.call(this)
         //!返回给定对象也就是这里的this的原型对象的foo方法,并绑定this指向；这里this指向obj对象
     }
   }
