@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./photoSphereViewer.min.css" inline
+</head>
+
+<body>
+  <div id="photosphere"></div>
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    #photosphere {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <div id="photosphere"></div>
+
+  <script src="./three.min.js"></script>
+  <script src="./D.min.js"></script>
+  <script src="./doT.min.js"></script>
+  <script src="./Event.js"></script>
+  <script src="./photoSphereViewer.min.js"></script>
+
+  <script>
+    var psv = PhotoSphereViewer({
+      container:'photosphere', //直接写id值
+      panorama: "./", //图片路径，要保证宽高2：1，才适合做柱状全景图
+      size: { //全景图显示大小
+        width: '100%',
+        height: screen.availHeight
+      },
+      default_long: 180, // 初始经度位置
+      default_lat: 0, // 初始纬度位置
+      max_fov: 100, // 最大缩放值
+      min_fov: 99, // 最小缩放值
+      default_fov: 100, // 默认缩放值，在1-179之间
+      latitude_range: [0, 0], //禁止上下滑动
+      mousewheel: false, // 禁止鼠标滚轮缩放
+      theta_offset: 1000, //旋转速度
+      navbar: false,
+
+      markers: [ //在图片中加图片表示，比如地图图标，对话
+        {
+          id:'image',
+          longitude: -40,
+          latitude: 0,
+          image:'./success.png',
+          width: 98,
+          height: 92,
+          anchor: 'bottom center'
+        }
+      ]
+    });
+    //全景图加载完成后，显示提示和按钮
+    psv.on('panorama-loaded', function () {
+      $('.hint-container').css('display', 'block');
+      $('.btn-container').css('display', 'block');
+
+    })
+  </script>
+</body>
+
+</html>
