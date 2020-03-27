@@ -7,6 +7,7 @@ class A {
   }
 }
 
+<<<<<<< HEAD
 class B extends A {
   constructor() {
     super();
@@ -19,3 +20,7 @@ class B extends A {
 console.log(B.m())
 //B.x = 3;
 //B.m() // 3
+=======
+var a = undefined ?? "1"
+console.log(a)
+>>>>>>> e3366d18d8b8006599bd172f784dd1c9a8bc4f02
