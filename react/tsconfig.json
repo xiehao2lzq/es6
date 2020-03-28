@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "experimentalDecorators": true, //装饰器开关
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noImplicitAny": false,
+        "emitDecoratorMetadata": true, //开启装饰器的metadata
+        "noEmit": true,
+        "jsx": "react",
+        "baseUrl": "./src",
+        "paths": {
+            "@/*": ["./*"],
+            "@pages/*": ["pages/*"],
+            "@div/*": ["components/div/*"]
+        },
+        "strictNullChecks": false
+    },
+    "include": ["src"]
+}

@@ -1,0 +1,80 @@
+.ant-breadcrumb-link .HomeLink {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.layout-content {
+  margin: 0 16px;
+  height: calc(100vh - 64px);
+}
+
+.layout-header {
+  background: #fff;
+  padding: 0;
+  position: "fixed";
+  width: 100%;
+  z-index: 1000;
+}
+
+.breadcrumb-panel {
+  margin: 16px 0;
+}
+
+.routes-content {
+  padding: 16px;
+  background-color: #fff;
+  height: calc(100% - 56px);
+  overflow: auto;
+}
+
+.logo {
+  background: transparent !important;
+  overflow: hidden;
+  height: 36px;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.logo .phone-number {
+  font-size: 16px;
+  color: #fff;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.textAlign {
+  text-align: center;
+}
+
+.home-layout-menu .iconfont {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.home-layout-menu .icon-mobanku {
+  font-size: 16px;
+}
+
+.home-layout-menu .icon-baidu {
+  font-size: 16px;
+}
+
+.home-layout-menu .icon-jilu {
+  font-size: 16px;
+}
+
+.home-layout-menu .icon-shezhi {
+  font-size: 16px;
+}
+
+.home-layout-menu .icon-jibenxinxi-xiugai {
+  font-size: 17px;
+}
+
+.home-layout-menu .icon-xiaoxitongzhi {
+  font-size: 16px;
+}

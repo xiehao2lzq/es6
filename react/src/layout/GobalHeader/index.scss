@@ -1,0 +1,196 @@
+// 右上角-个人中心
+.rightUserInfo{
+    float: right;
+    padding-right: 40px;
+    .list{
+        .item{
+            float: right;
+            color: #001529;
+            font-size: 14px;
+            cursor: pointer;
+            span{
+                color: #001529;
+                font-size: 14px;
+            }
+            &::after{
+                // display: inline-block;
+                display: none;
+                content: '';
+                width: 1px;
+                height: 14px;
+                background-color: #b2b2b2;
+                margin: 0 15px;
+                position: relative;
+                top: 2px;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+                margin-left: 12px;
+                position: relative;
+                // top: -2px;
+                top: 4px;
+            }
+            .userIcon{
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                margin-left: 12px;
+                border-radius: 50%;
+                background-color: #001529;
+                position: relative;
+                top: 15px;
+                img{
+                    width: 35px;
+                    height: 35px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                }
+            }
+            // 消息个数提示
+            .ant-badge-count {
+                top: -3px;
+                right: -5px;
+                p.current{
+                    color: #fff;
+                }
+            }
+        }
+        .item:first-child{
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
+// 01.用户信息菜单
+.userBox{
+    // @include position-way-tr(relative, 22px, -5px);
+    position: relative;
+    top: 22px;
+    left: -5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+// 02.消息通知
+.noticeBox{
+    padding: 5px 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    // @include position-way-tr(relative, 19px, -20px);
+    position: relative;
+    top: 19px;
+    left: -20px;
+    .ant-menu-item{
+        height: auto;
+        padding: 0;
+        margin: 0!important;
+    }
+    li.ant-menu-item:last-child{
+        .noticeItem{
+            border: 0;
+        }
+    }
+    .noticeList{
+        max-height: 260px;
+        overflow: auto;
+        .noticeItem{
+            width: 335px;
+            min-height: 45px;
+            padding: 14px 20px;
+            border-bottom: 1px solid #e8e8e8;
+            cursor: pointer;
+            transition: all .5s;
+            &:hover{
+                background-color: #e6f7ff;
+            }
+            h3{
+                color: rgba(0, 0, 0, 0.65);
+                font-size: 14px;
+                line-height: 22px;
+                white-space: pre-wrap;
+            }
+            p{
+                width: 295px;
+                margin-top: 5px;
+                font-size: 12px;
+                line-height: 1.5;
+                color: rgba(0, 0, 0, 0.45);
+                white-space: pre-wrap;
+                &.date{
+                    text-align: right;
+                }
+            }
+        }
+        // 01.自定义滚动条
+        /*滚动条整体样式*/
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 1px;
+        }
+        /*滚动条滑块*/
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background-color: rgba($color: #C1C1C1, $alpha: 0.65);
+        }
+        /*滚动条轨道*/
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+            border-radius: 5px;
+            background: #ccc;
+        }
+        // 03.暂无消息通知
+        .noticeNone{
+            border: 0 solid #333;
+            pointer-events: none;
+            text-align: center;
+            padding: 25px 0 40px;
+            user-select: none;
+            img{
+                display: inline-block;
+                margin: 10px 0;
+            }
+            p{
+                width: auto;
+                text-align: center;
+            }
+        }
+    }
+    // 01.topTitle
+    .topTitle{
+        padding: 0 20px;
+        line-height: 40px;
+        border-bottom: 1px solid #e8e8e8;
+        overflow: hidden;
+        .left{
+            float: left;
+            color: rgba(0, 0, 0, 0.65);
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .right{
+            float: right;
+            cursor: pointer;
+            color: #1890ff;
+            font-size: 14px;
+            margin-top: 0;
+        }
+    }
+    // 02.bottomButton
+    .bottomButton{
+        border-top: 1px solid #e8e8e8;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        color: #1890ff;
+        font-size: 14px;
+    }
+}
+
+

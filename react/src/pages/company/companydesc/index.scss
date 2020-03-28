@@ -1,0 +1,67 @@
+
+.Companydesc{
+    .descriptionNode {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+
+        .descriptionNodeitem {
+            padding-left: 6px;
+        }
+    }
+
+    .avatar54px {
+        display: inline-block;
+        width: 54px;
+        height: 54px;
+    }
+    .describe{
+        margin: 10px 0;
+        line-height: 21px;
+        width:375px;
+        height: 42px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        /*! autoprefixer: off */
+        -webkit-box-orient: vertical;
+    }
+    .operate{
+        padding: 16px 0 0;
+        display:flex;
+        justify-content: space-between;
+        .opeterateState{
+            line-height: 32px;
+        }
+        .opeterateBtn{
+            width:50%;
+            display:flex;
+            justify-content: space-around;
+        }
+    }
+    .logoHeight{
+        height:99px;
+    }
+    .ant-avatar{
+        border-radius: 0;
+    }
+    .PersonalIn-model{
+        text-align: center;
+        .iframe{
+            width: 400px;
+            height: 640px;
+            border: 1px solid #E6E6E6;
+            position: relative;
+            overflow: hidden;
+            // margin: 0 auto;
+        }
+        .iframe-div{
+            width: 400px;
+            margin: 0 auto;
+        }
+        .button{
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,167 @@
+.HomePage{
+    width: 100%;
+    height: 100%;
+    background: #F2F7F9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    .HomeSwiper{
+        width: 100%;
+        height: 500px;
+        border-radius: 6px;
+        .swiperItem{
+            width: 100%;
+            height: 500px;
+            border-radius: 6px;
+            // background: #fff;
+            .swiper-img{
+                width: 100%;
+                height: 100%;
+                border-radius: 6px;
+            }
+          
+        }
+        button{
+            width: 10px !important;
+            height: 10px  !important;
+            border-radius: 50% !important;
+           
+        }
+        li{
+            background:rgba(139,147,215,1) !important;
+            border-radius: 50% !important
+        }
+        .slick-active{
+            background: #ffffff !important; 
+            border-radius: 50% !important;
+        }
+        .slick-dots-bottom{
+            bottom: 20px;
+        }
+    }
+    .tabels{
+        margin-top: 20px;
+        .table-title{
+            font-size:16px;
+            font-family:Microsoft YaHei;
+            font-weight:bold;
+            color:rgba(39,39,39,1);
+            text-align: left;
+            padding-bottom: 22px;
+            border-bottom: 1px solid #E4EAEC;
+            width: 100%;
+            margin-bottom: 20px;
+            span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .title-img{
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+                vertical-align: middle;
+            }
+            
+        }
+        .pagination-text{
+            text-align: left;
+            float: left;
+        }
+        .curour{
+            cursor: pointer;
+        }
+        @media screen and (max-width:1400px) {
+            .Pagination{
+                width: 62%;
+                float:right;
+            }
+        }
+        @media screen and (min-width:1400px) {
+            .Pagination{
+                width: 62%;
+                float:right;
+            }
+        }
+      
+        .column-data{
+            text-align: center;
+            // width:100%;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        .color1{
+            background: #F5F5F5;
+        }
+        .ant-table-thead > tr > th{
+            background: #DFE0EB !important;
+        }
+        .left,.right{
+            width:49.5%;
+            float: left;
+            background: #ffffff;
+            padding-bottom:40px;
+            padding: 20px;
+            text-align: center;
+            .record-pagination{
+                margin-top: 60px;
+                text-align: right;
+                .pagination-text{
+                    font-size:14px;
+                    font-family:Microsoft YaHei;
+                    font-weight:400;
+                    color:rgba(39,39,39,1);
+                    span{
+                        margin-right: 20px;
+                    }
+                    .text-img{
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+
+        }
+        .left{
+            margin-right:1%;
+        }
+    }
+   
+}
+.HomePage-Model{
+    .detail-title{
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .detail-content{
+        margin: 0 auto;
+        width: 36%;
+        overflow: hidden;
+       .time{
+            float:left;
+        }
+        .writer{
+            margin-left: 30px;
+            float: right;
+        }
+        .writes{
+            float: left;
+            margin-left: 30px;
+        }
+        .Browse-Time{
+            float: right;
+        }
+    }
+    .detail-width{
+        width:53%;
+    }
+    .content{
+        margin-top: 20px;
+        
+    }
+
+}
